@@ -1,0 +1,108 @@
+.favorites-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.favorites-container h1 {
+    color: #ff4500;
+    margin-bottom: 2rem;
+}
+
+.favorites-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.favorite-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.favorite-item:hover {
+    transform: translateY(-5px);
+}
+
+.favorite-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.favorite-content {
+    padding: 1.5rem;
+}
+
+.favorite-content h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.favorite-content p {
+    color: #666;
+    margin: 1rem 0;
+}
+
+.favorite-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: #f8f8f8;
+}
+
+.add-to-cart {
+    background: #ff4500;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: #cc3700;
+}
+
+.remove-favorite {
+    background: none;
+    border: none;
+    color: #ff0000;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.remove-favorite:hover {
+    color: #cc0000;
+}
+
+.empty-favorites {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
